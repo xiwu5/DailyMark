@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark List</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Mark List for <span th:text="${date}">Selected Date</span></h1>
+
+    <div style="text-align: center;">
+        <a href="/marks/new" class="btn btn-primary">Add New Mark</a>
+        <a href="/" class="btn btn-secondary">Back to Home</a>
+    </div>
+
+    <div class="notes-container">
+        <div th:each="mark : ${marks}" class="note">
+            <div class="note-title" th:text="${mark.title}">Title</div>
+            <div class="note-date" th:text="${#temporals.format(mark.createdDate, 'yyyy-MM-dd')}">Date</div>
+            <div class="note-description" th:text="${mark.description}">Description</div>
+            <div class="note-category" th:text="${mark.category}">Category</div>
+            <div class="note-actions">
+                <a th:href="@{/marks/{id}(id=${mark.id})}" class="btn btn-info">View/Edit</a>
+                <form th:action="@{/marks/{id}/delete(id=${mark.id}, date=${date})}" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>DailyMark @2024 <span class="small-text">Terms  Privacy  Contact DailyMark Support</span> </p>
+</footer>
+
+</body>
+</html>

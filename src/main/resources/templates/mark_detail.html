@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Detail</title>
+</head>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <body>
+<div class="container">
+    <h1>Mark Detail</h1>
+    <div>
+        <div class="note">
+            <h2 class="note-title" th:text="${mark.title}">Title</h2>
+            <p class="note-description" th:text="${mark.description}">Description</p>
+            <p class="note-date" th:text="${mark.date}">Date</p>
+            <p th:text="${mark.category}">Category</p>
+        </div>
+        <div class="button-container">
+            <a th:href="@{/marks(date=${mark.date})}" class="btn btn-primary">Back to List</a>
+            <!-- Display the submitted photo -->
+            <!--        <img th:src="@{${mark.photo.url}}" alt="Mark Photo" class="img-thumbnail mt-2" th:if="${mark.photo != null}">-->
+
+        </div>
+    </div>
+
+</div>
+<footer>
+    <p>DailyMark @2024 <span class="small-text">Terms  Privacy  Contact DailyMark Support</span> </p>
+</footer>
+</body>
+</html>

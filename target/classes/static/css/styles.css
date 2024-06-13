@@ -1,0 +1,363 @@
+/* Common styles for both pages */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for mark_detail page only */
+
+.note {
+    background-color: #fffbcc; /* Notes Color : yellow */
+    color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.mark-detail .note-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mark-detail .note-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.mark-detail .note-date {
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.mark-detail .note-category {
+    font-size: 16px;
+    font-style: italic;
+    color: #cccccc;
+}
+
+/* Button style */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1a73e8;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0f62fe; /* Darker shade of harmony blue */
+}
+
+/* Styles for calendar page only */
+
+#calendar-container {
+    position: absolute;
+    top: 0;
+    /*transform: translateX(-50%);*/
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh; /* Adjusted height of calendar container */
+}
+
+#calendar {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.fc-toolbar-title {
+    color: #333;
+    font-weight: 600;
+}
+
+.fc-button {
+    background-color: #0071e3 !important;
+    border: none !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.fc-button:hover {
+    background-color: #1c1c1e !important;
+}
+
+.fc-daygrid-day-number {
+    color: #333;
+}
+
+.fc-col-header-cell-cushion {
+    color: #333;
+    font-weight: 600;
+}
+
+.fc-daygrid-day {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+}
+
+.fc-scrollgrid {
+    border-color: #e5e5e5;
+}
+
+.fc-event {
+    background-color: #0071e3;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+
+
+.mark-lists .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mark-lists h1 {
+    margin-bottom: 10px;
+}
+
+.mark-lists .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mark-lists .btn-primary {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+.mark-lists .btn-primary:hover {
+    background-color: #0f62fe;
+}
+
+.mark-lists .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.mark-lists .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.mark-lists .btn-info {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.mark-lists .btn-info:hover {
+    background-color: #138496;
+}
+
+.mark-lists .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.mark-lists .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.mark-lists .note {
+    background-color: #1c1c1e; /* Dark background */
+    color: #ffffff; /* White text */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.mark-lists .note:hover {
+    transform: scale(1.05);
+}
+
+.mark-lists .note h2 {
+    margin-top: 0;
+}
+
+.mark-lists .note-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mark-lists .note img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
+
+.mark-detail .note {
+    background-color: #1c1c1e;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.mark-detail .note-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mark-detail .note-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.mark-detail .note-date {
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.mark-detail .note-category {
+    font-size: 16px;
+    font-style: italic;
+    color: #cccccc;
+}
+
+.mark-detail .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1a73e8; /* Harmony blue color */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mark-detail .btn:hover {
+    background-color: #0f62fe;
+}
+
+.mark-detail .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 10px;
+    line-height: 0.5;
+    text-align: center;
+    background-color:  #0056b3;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+.small-text {
+    font-size: 12px; /* Adjust font size as needed */
+    margin-left: 5px; /* Add reasonable space */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: #333;
+    transition: left 0.3s ease;
+    z-index: 100; /* Ensure sidebar appears above other content */
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    padding: 10px;
+}
+
+.sidebar-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    font-size: 12px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    z-index: 1; /* Ensure main content is below sidebar */
+}
+
